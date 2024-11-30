@@ -6,7 +6,7 @@ import sleep from 'k6';
 // 2. Configuração
 export const options = {
     vus: 1,
-    duration: '10s'
+    duration: '60s'
 }
 
 //3. Execução // código VU
