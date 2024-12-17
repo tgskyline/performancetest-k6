@@ -15,7 +15,7 @@ import { check, sleep } from 'k6';
 
 // Target = vus
 export const options = {
-    stages: [
+    stages:[
         { duration: '10s', target: 10 },
         { duration: '10s', target: 10 },
         { duration: '10s', target: 0 },
