@@ -1,5 +1,4 @@
 import http from 'k6/http';
-import {sleep} from 'k6';
 
 // Taxa de chegada constante
 // Quando usar:
