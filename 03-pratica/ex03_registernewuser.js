@@ -1,4 +1,4 @@
-//Public API: Exemplo
+//Public API: Exemplo 3
 // Realiazar cadastro de um novo usuário
 // Critérios:
 // Performance Test
