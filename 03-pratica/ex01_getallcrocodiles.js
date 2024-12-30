@@ -14,8 +14,14 @@ export const options = {
     duration: '30s',
     thresholds: {
         checks: ['rate > 0.99']
-    }
-}
+    },
+    ext: {
+    loadimpact: {
+        projectID: '3733461',
+        name: 'Curso k6'
+            }
+        }
+    };
 
 export default function () {
     const BASE_URL = 'https://test-api.k6.io/public/crocodiles/';

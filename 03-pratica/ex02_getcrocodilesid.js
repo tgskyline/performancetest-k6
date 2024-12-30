@@ -24,8 +24,14 @@ export const options = {
     thresholds: {
         checks: ['rate > 0.95'],
         http_req_duration: ['p(95) < 200'] /// Aqui é esperado que 95% das requisições alcancem 200ms
+    },
+    ext: {
+    loadimpact: {
+        projectID: '3733461',
+        name: 'Curso k6'
+            },    
+        }
     }
-}
 
 // Função para acessar o JSON e o objeto CROCODILES
 const data = new SharedArray('Leitura do json', function () {  

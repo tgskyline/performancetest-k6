@@ -14,8 +14,14 @@ export const options = {
             timeUnit:'1s',
             preAllocatedVUs:50,
         },
-    },
-};
+    ext: {
+        loadimpact: {
+            projectID: '3733461',
+            name: 'Curso k6'
+            }
+            },    
+        }
+    };
 
 export default function (){
     http.get('http://test.k6.io/contatcts.php');
