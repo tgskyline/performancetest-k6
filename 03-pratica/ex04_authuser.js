@@ -25,8 +25,14 @@ export const options = {
     ],
     thresholds: {
         http_req_failed: ['rate < 0.01'],
+    },
+    ext: {
+        loadimpact: {
+            projectID: '3733461',
+            name: 'Curso k6'
+        },
     }
-}
+};
 
 const csvData = new SharedArray("Ler dados", function () {
     return papaparse.parse(open('/archives/user.csv'), { header: true }).data; 

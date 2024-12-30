@@ -3,11 +3,11 @@ clear
 path=$1
 
 read -p "Deseja gerar Web DashBoard Local [true ou false]: " wd
-echo -e "----------------------------------------------------------------------"
+echo -e "----------------------------------------------------------------------------------"
 read -p "Como deseja executar o teste [local - local/cloud - cloud]: " runtest
-echo -e "----------------------------------------------------------------------"
+echo -e "----------------------------------------------------------------------------------"
 read -p "Deseja usar o EndPoint "/public" [true ou false]: " url
-echo -e "----------------------------------------------------------------------"
+echo -e "----------------------------------------------------------------------------------"
 
 if [[ "$runtest" == "local" ]]; then
     echo -e "\nExecutando teste com URL definida no código"

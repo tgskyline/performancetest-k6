@@ -10,28 +10,34 @@
 import http from 'k6/http';
 
 export const options = {
-    scenarios: { 
-        listar: {
-            executor: 'constant-arrival-rate',
-            exec: 'listar',
-            duration: '30s',
-            rate: 200,
-            timeUnit: '1s',
-            preAllocatedVUs: 150,
-            gracefulStop: '5s',
-            tags: { test_type: 'listagem_de_crocodilos' }
-        },
-        buscar: {
-            executor: 'per-vu-iterations',
-            exec: 'buscar',
-            vus: 50,
-            iterations: 20,
-            maxDuration: '1m',
-            gracefulStop: '5s',
-            tags: { test_type: 'busca_de_crocodilos' }
-        }
+  scenarios: {
+    listar: {
+      executor: 'constant-arrival-rate',
+      exec: 'listar',
+      duration: '30s',
+      rate: 200,
+      timeUnit: '1s',
+      preAllocatedVUs: 150,
+      gracefulStop: '5s',
+      tags: { test_type: 'listagem_de_crocodilos' }
     },
-    discardResponseBodies: true
+    buscar: {
+      executor: 'per-vu-iterations',
+      exec: 'buscar',
+      vus: 50,
+      iterations: 20,
+      maxDuration: '1m',
+      gracefulStop: '5s',
+      tags: { test_type: 'busca_de_crocodilos' }
+    }
+  },
+  discardResponseBodies: true,
+  ext: {
+    loadimpact: {
+      projectID: 3733461,
+      name: 'Curso k6'
+    }
+  }
 }
 
 export function listar() {
